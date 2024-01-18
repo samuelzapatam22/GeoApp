@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 const countryRoutes = require('./routes/countries')
 app.use('/api/countries',countryRoutes)
 
-mongoose.connect('mongodb://127.0.0.1:27017/GeoApp')
+mongoose.connect('mongodb+srv://deivypr28:c7SSt7DL081PP1yN@cluster0.sxdtfez.mongodb.net/GeoApp')
 .then(()=> console.log("Conected to DataBase"))
 .catch((error)=> console.log(`error`+ error))
 app.get('/',(req,res)=>{
