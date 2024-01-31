@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import './App.css'
 import { gql, useQuery } from '@apollo/client'
+import CreateCountryForm from './components/createCountryForm/CreateCountryForm'
+import './App.css'
 
 
 const GET_ALL_COUNTRIES = gql `
@@ -26,12 +27,7 @@ function App() {
 
   return (
    <div className='container'>
-    {data.countries.map((country) => (
-      <div className='container-country' key={country.name}>
-        {country.name}
-        <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt={country.name} />
-      </div>
-    ))}
+    <CreateCountryForm />
    </div>
   )
 }
