@@ -19,8 +19,7 @@ const createCountry = async (req,res) => {
          res.status(200).json(saveCountry)
       } catch (error) {
          console.log(error)
-         res.status(500).json({message: "server error"})
-         
+         res.status(500).json({message: "server error"})     
          
       }
  }
