@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 .container {
+=======
+.container-country {
+  border: 1px solid #ddd;
+>>>>>>> Stashed changes
   display: flex;
   align-items: center;
   justify-content: center;
