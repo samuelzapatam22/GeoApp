@@ -1,11 +1,13 @@
-<<<<<<< Updated upstream
-.container {
-=======
-.container-country {
-  border: 1px solid #ddd;
->>>>>>> Stashed changes
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+*{
+  margin: 0%;
+  padding: 0;
 }
+
+.container {
+  display: flex;
+}
+
+.slider-bar {
+  display: flex;
+}
+

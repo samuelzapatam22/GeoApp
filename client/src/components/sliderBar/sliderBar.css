@@ -1,0 +1,20 @@
+.sliderBar {
+    padding: 20px;
+    background: linear-gradient(to bottom, #0a0a0a, #173ba7);
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderBar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.sliderBar a:hover {
+    text-decoration: underline;
+}

@@ -1,8 +1,12 @@
 import React from 'react'
 import './createCountryForm.css'
+import '../sliderBar/SliderBar'
+import SliderBar from '../sliderBar/SliderBar'
 
 function CreateCountryForm() {
   return (
+    <div className='slider-bar'>
+      <SliderBar />
     <div className='CreateCountryForm'>
       <div className='container-form-create'>
         <h1 className='title'>Create Country</h1>
@@ -30,6 +34,7 @@ function CreateCountryForm() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   )
 }
