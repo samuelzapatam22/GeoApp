@@ -7,6 +7,11 @@ import SliderBar from './components/sliderBar/SliderBar'
 import ListCountries from './components/listCountries/ListCountries'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+<<<<<<< Updated upstream
+=======
+/* import { gql, useQuery } from '@apollo/client'*/
+import SearchBar from './components/searchBar/SearchBar';
+>>>>>>> Stashed changes
 
 const GET_ALL_COUNTRIES = gql`
 query countries{
