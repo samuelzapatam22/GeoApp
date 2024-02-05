@@ -8,6 +8,8 @@ function SliderBar() {
         <Link to="/"></Link>
         <Link to="/create">Create Country</Link>
         <Link to="/home">Home</Link>
+        <Link to="/update">Update Country</Link>
+
     </div>
   )
 }
