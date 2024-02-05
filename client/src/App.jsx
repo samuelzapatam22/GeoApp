@@ -1,17 +1,13 @@
 import { useState } from 'react'
 import { gql, useQuery } from '@apollo/client'
 import CreateCountryForm from './components/createCountryForm/CreateCountryForm'
+import UpdateCountryForm from './components/updateCountryForm /UpdateCountryForm'
 import SearchBar from './components/searchBar/SearchBar'
 import Home from './components/Home/Home'
 import SliderBar from './components/sliderBar/SliderBar'
 import ListCountries from './components/listCountries/ListCountries'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-<<<<<<< Updated upstream
-=======
-/* import { gql, useQuery } from '@apollo/client'*/
-import SearchBar from './components/searchBar/SearchBar';
->>>>>>> Stashed changes
 
 const GET_ALL_COUNTRIES = gql`
 query countries{
@@ -43,6 +39,7 @@ function App() {
           <Route path='/' element={<Home />}  />
           <Route path='/create' element={<CreateCountryForm />} />
           <Route path='/home' element={<ListCountries />} />
+          <Route path='/update' element={<UpdateCountryForm />} />
         </Routes>
         </div>
       </Router>

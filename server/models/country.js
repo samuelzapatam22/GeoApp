@@ -4,8 +4,8 @@ const countrySchema = new mongoose.Schema({
     name: String,
     capital: String,
     currency : String,
-    languages: [{name: String}],
-    continent: {name: String}
+    languages: String,
+    continent: String
 })
 const Country = mongoose.model('paises',countrySchema)
 module.exports= Country

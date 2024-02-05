@@ -13,7 +13,7 @@ const SearchBar = (/* { onSearch } */) => {
 
     return (
         <div className='SearchBar'>
-            <input name='query' type='text' placeholder='Countries...' /* onChange={ handleSearch } */ />
+            <input name='query' type='text'  placeholder='Countries...' /* onChange={ handleSearch } */ />
             <button className='Button' >Search</button>
         </div>
     );

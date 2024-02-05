@@ -14,13 +14,12 @@ const createCountry = async (req,res) => {
      try {
         const{code,name,capital,currency,languages,continent} = req.body
 
-         const arrayLanguages = languages.map((lang)=>({name: lang}))
         const newCountry = new Country({
             code,
             name,
             capital,
             currency,
-            languages: arrayLanguages,
+            languages,
             continent
         })
         console.log(newCountry)

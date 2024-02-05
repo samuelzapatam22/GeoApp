@@ -2,35 +2,72 @@ import React from 'react'
 import './createCountryForm.css'
 import '../sliderBar/SliderBar'
 import SliderBar from '../sliderBar/SliderBar'
+import { useState } from 'react'
+import axios from 'axios'
 
 function CreateCountryForm() {
+  const [code, setCode] = useState('');
+  const [name, setName] = useState('');
+  const [capital, setCapital] = useState('');
+  const [languages, setLanguages] = useState('');
+  const [currency, setCurrency] = useState('');
+  const [continent, setContinent] = useState('');
+
+  const createCountry = async(e) => {
+    e.preventDefault()
+    
+    const countryData = {
+      code,
+      name,
+      capital,
+      languages, 
+      currency,
+      continent
+    }
+
+    setCode('');
+    setName('');
+    setCapital('');
+    setLanguages('');
+    setCurrency('');
+    setContinent('');
+
+
+    try {
+      const response = await axios.post('http://localhost:3001/api/countries/create', countryData);
+      console.log(response.data); 
+    } catch (error) {
+      console.error('Error creating country:', error);
+     
+    }
+  }
   return (
     <div className='slider-bar'>
       <SliderBar />
     <div className='CreateCountryForm'>
       <div className='container-form-create'>
         <h1 className='title'>Create Country</h1>
-        <form>
+        <form onSubmit={createCountry}>
           <div className='field-code'>
             <label>Code country</label>
-          <input type="text" name='code' placeholder='Code' />
+          <input type="text" name='code' value={code} onChange={e => setCode(e.target.value)} placeholder='Code' />
           <button className='btn-consult'>Consult</button>
           </div>
           <div className='field-form-create'>
             <label>Name</label>
-            <input type="text" name="name" placeholder='Name' />
+            <input type="text" value={name} onChange={e => setName(e.target.value)} name="name" placeholder='Name' />
             <label>Capital</label>
-            <input type="text" name="capital" placeholder='Capital' />
+            <input type="text" name="capital" value={capital} onChange={e => setCapital(e.target.value)} placeholder='Capital' />
             <label>Languages</label>
-            <input type="text" name="languages" placeholder='Languages' />
+            <input type="text" name="languages" value={languages} onChange={e => setLanguages(e.target.value)} placeholder='Languages' />
             <label>Currency</label>
-            <input type="text" name="currency" placeholder='Currency' />
+            <input type="text" name="currency" value={currency} onChange={e => setCurrency(e.target.value)} placeholder='Currency' />
             <label>Continent</label>
-            <input type="text" name="continent" placeholder='Continent' />
+            <input type="text" name="continent" value={continent} onChange={e => setContinent(e.target.value)} placeholder='Continent' />
           </div>
           <div className='buttons'>
             <button className='btn-clean'>Clean</button>
-            <button className='btn-create'>create</button>
+            <button type='submit' className='btn-create'>create</button>
           </div>
         </form>
       </div>
