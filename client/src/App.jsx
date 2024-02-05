@@ -2,6 +2,11 @@ import { useState } from 'react'
 import { gql, useQuery } from '@apollo/client'
 import CreateCountryForm from './components/createCountryForm/CreateCountryForm'
 import './App.css'
+<<<<<<< Updated upstream
+=======
+/* import { gql, useQuery } from '@apollo/client'*/
+import SearchBar from './components/searchBar/SearchBar';
+>>>>>>> Stashed changes
 
 
 const GET_ALL_COUNTRIES = gql `
