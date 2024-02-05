@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SliderBar from '../sliderBar/SliderBar';
+import SearchBar from "../searchBar/SearchBar.jsx";
 
 function ListCountries() {
   const [lists, setList] = useState([]);
@@ -22,10 +23,12 @@ function ListCountries() {
   return (
     <div className='slider-bar'>
       <SliderBar />
+      <SearchBar/>
       <div className='ListCountries'>
         {lists.map((list) => (
           <div key={list._id}>
             <p>{list.name}</p>
+            <p>{list.continent?.name}</p>
           </div>
         ))}
       </div>
