@@ -1,0 +1,83 @@
+body {
+    background-color: #15171a;
+    color: #fff;
+    overflow-y: hidden;
+}
+
+
+.CreateCountryForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+    width: 500px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #ffffffb2;
+}
+
+input::placeholder {
+    color: #00000091;
+}
+
+input:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 19px;
+    border-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.btn-consult {
+    background-color: rgb(29, 79, 153);
+    color: #fff;
+}
+
+.btn-clean {
+    background-color: rgb(153, 17, 17);
+    color: #fff;
+}
+
+.btn-create {
+    background-color: rgb(14, 139, 14);
+    color: #fff;
+}
+
+.field-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}

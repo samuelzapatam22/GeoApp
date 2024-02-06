@@ -1,9 +1,15 @@
 import { useState } from 'react'
-import './App.css'
 import { gql, useQuery } from '@apollo/client'
+import CreateCountryForm from './components/createCountryForm/CreateCountryForm'
+import UpdateCountryForm from './components/updateCountryForm/UpdateCountryForm'
+import SearchBar from './components/searchBar/SearchBar'
+import Home from './components/Home/Home'
+import SliderBar from './components/sliderBar/SliderBar'
+import ListCountries from './components/listCountries/ListCountries'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './App.css'
 
-
-const GET_ALL_COUNTRIES = gql `
+const GET_ALL_COUNTRIES = gql`
 query countries{
   countries {
     code
@@ -19,20 +25,25 @@ query countries{
 `
 
 function App() {
-  const {data, loading, error} = useQuery(GET_ALL_COUNTRIES)
+  const { data, loading, error } = useQuery(GET_ALL_COUNTRIES)
 
-  if(loading) return <p>loading..</p>
-  if(error) return <p>Error..{error.message}</p>
+  if (loading) return <p>loading..</p>
+  if (error) return <p>Error..{error.message}</p>
 
   return (
-   <div className='container'>
-    {data.countries.map((country) => (
-      <div className='container-country' key={country.name}>
-        {country.name}
-        <img src={`https://flagsapi.com/${country.code}/flat/64.png`} alt={country.name} />
-      </div>
-    ))}
-   </div>
+    <div className='container'>
+      <Router>
+      <div className='content'>
+        <Routes>
+          <Route path='/*' element={<SliderBar />} />
+          <Route path='/' element={<Home />}  />
+          <Route path='/create' element={<CreateCountryForm />} />
+          <Route path='/home' element={<ListCountries />} />
+          <Route path='/update' element={<UpdateCountryForm />} />
+        </Routes>
+        </div>
+      </Router>
+    </div>
   )
 }
 

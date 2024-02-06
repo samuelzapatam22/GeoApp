@@ -1,21 +1,23 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+*{
+  margin: 0%;
+  padding: 0;
 }
 
-.container-country {
-  border: 1px solid #ddd;
+.container {
   display: flex;
-  flex-direction: column;
-  margin: 20px;
-  padding: 20px 40px;
-  border-radius: 20px;
 }
-.container-country:hover {
-  background-color: orangered;
-  cursor: pointer;
-  color: #fff;
+
+.slider-bar {
+  display: flex;
 }
-.container-country img {
-  width: 100px;
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.elements {
+  display: flex;
 }
