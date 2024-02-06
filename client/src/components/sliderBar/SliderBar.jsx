@@ -7,7 +7,7 @@ function SliderBar() {
   return (
     <div className='sliderBar'>
         <img src={Logo} alt="" />
-        <Link to="/">Inicio</Link>
+        <Link to="/">Welcome</Link>
         <Link to="/create">Create Country</Link>
         <Link to="/home">Home</Link>
         <Link to="/update">Update Country</Link>
