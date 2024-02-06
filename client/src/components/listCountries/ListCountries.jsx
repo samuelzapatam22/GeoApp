@@ -6,6 +6,8 @@ import './listCountries.css'
 
 function ListCountries() {
   const [lists, setList] = useState([]);
+  const [details, SetDetails] = useState(false);
+  const [info, setInfo] = useState({});
 
   useEffect(() => {
     const getCountry = async () => {
@@ -21,6 +23,13 @@ function ListCountries() {
     getCountry();
   }, []);
 
+  const handleCountryClick = (country) => {
+    setInfo((
+      <p>{list}</p>
+    ));
+    SetDetails(false);
+  };
+
   return (
     <div className='slider-bar'>
       <SliderBar />
@@ -28,7 +37,7 @@ function ListCountries() {
         <SearchBar/>
         <div className='ListCountries'>
         {lists.map((list) => (
-          <div key={list._id} className='ListCountriesItem'>
+          <div key={list._id} className='ListCountriesItem' onClick={() => handleCountryClick(list)}>
             <img src={`https://flagsapi.com/${list.code}/flat/64.png`} />
             <p>{list.name}</p>
             <p>{list.continent?.name}</p>

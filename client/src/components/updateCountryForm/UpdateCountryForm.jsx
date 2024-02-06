@@ -28,7 +28,7 @@ function UpdateCountryForm() {
             <input type="text" name="continent" placeholder='Continent' />
           </div>
           <div className='buttons'>
-            <button className='btn-clean'>Clean</button>
+            <button className='btn-clean'>Delete</button>
             <button className='btn-create'>create</button>
           </div>
         </form>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { gql, useQuery } from '@apollo/client'
 import CreateCountryForm from './components/createCountryForm/CreateCountryForm'
-import UpdateCountryForm from './components/updateCountryForm /UpdateCountryForm'
+import UpdateCountryForm from './components/updateCountryForm/UpdateCountryForm'
 import SearchBar from './components/searchBar/SearchBar'
 import Home from './components/Home/Home'
 import SliderBar from './components/sliderBar/SliderBar'
