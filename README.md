@@ -23,10 +23,6 @@ That's how simple it is to use **GeoAPP**.
 ```bash
 npm i
 ```
-- For future versions, we will enhance the UX. Therefore, you should install the following in the project terminal:
-```bash
-npm install sweetalert2
-```
 ## Database
 For this project, we will use a non-SQL (non-relational) database, with the MongoDB database engine. Here, we will store all the information about the countries that you will be able to create in the future.
 
