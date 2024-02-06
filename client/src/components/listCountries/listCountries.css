@@ -16,6 +16,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 800px){
+  .ListCountries{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .ListCountriesItem {
     margin: 10px;
     background-color: #ffffff34;
@@ -23,4 +29,11 @@
     padding: 10px;
     border: 1px solid #ddd;
     box-shadow: 10px 20px 10px 5px #000;
+}
+
+.popup {
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
 }

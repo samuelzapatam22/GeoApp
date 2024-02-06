@@ -3,6 +3,8 @@ import axios from 'axios';
 import SliderBar from '../sliderBar/SliderBar';
 import SearchBar from "../searchBar/SearchBar.jsx";
 import './listCountries.css'
+import Swal from "sweetalert2";
+
 
 function ListCountries() {
   const [lists, setList] = useState([]);
@@ -23,11 +25,13 @@ function ListCountries() {
     getCountry();
   }, []);
 
-  const handleCountryClick = (country) => {
-    setInfo((
-      <p>{list}</p>
-    ));
-    SetDetails(false);
+  const handleCountryClick = () => {
+
+    lists.map((list) => (
+      <p>{list.currency}</p>
+    ))
+    SetDetails(false)
+    console.log('click');
   };
 
   return (
@@ -37,7 +41,7 @@ function ListCountries() {
         <SearchBar/>
         <div className='ListCountries'>
         {lists.map((list) => (
-          <div key={list._id} className='ListCountriesItem' onClick={() => handleCountryClick(list)}>
+          <div key={list._id} className='ListCountriesItem' onClick={handleCountryClick}>
             <img src={`https://flagsapi.com/${list.code}/flat/64.png`} />
             <p>{list.name}</p>
             <p>{list.continent?.name}</p>
