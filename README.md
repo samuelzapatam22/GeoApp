@@ -1,61 +1,68 @@
-# GeoApp
+# GeoAPP: Your world in one click!!
 
-## Descripción
-GeoApp es una aplicacion web que te permite visualizar todos los paises, su nombre y bandera. Esto al consumir una api graphQL: https://countries.trevorblades.com/ 
+**GeoAPP** is a web application designed to offer you an unparalleled experience. This tool allows you to systematically and easily organize your upcoming destinations, providing you with a personalized agenda of the countries you wish to visit. With **GeoAPP**, you have the ability to create and customize all this information according to your individual preferences.
 
-## Características Principales
-- podras visualizar todas las banderas con el nombre del pais correspondiente.
+## How It Works
 
-![Alt text](<images/Captura desde 2024-01-17 20-07-08.png>)
+The functionality of **GeoAPP** focuses on providing you with an intuitive and efficient method for creating your preferred countries. You no longer have to worry about losing sight of your desired destinations or missing important details. With this application, you can create a detailed agenda that fits your specific interests and needs.
 
+## Key Features
+- You can visualize all your countries in a graphical and intuitive way on our `Home` window.
 
+![alt text](<images/Captura desde 2024-02-06 11-07-07.png>)
 
-## Instalación
+- Want to create a country? You can do so in our `Create Country` window.
 
-- En la terminal de la carpeta `server` y en la carpeta `client`, ejecuta el siguiente comando para instalar las dependencias del servidor:
+![alt text](<images/Captura desde 2024-02-06 11-08-48.png>)
+
+That's how simple it is to use **GeoAPP**.
+
+## Installation
+
+- In the terminal of the `server` folder and in the `client` folder, run the following command to install server dependencies:
 ```bash
 npm i
 ```
-## Base de Datos
-Para este proyecto usaremos una base de datos no SQL (no relacionales), con el motor de bases de datos mongoDB. En esta guardaremos toda la info de los paises que en un futuro podras crear. 
+## Database
+For this project, we will use a non-SQL (non-relational) database, with the MongoDB database engine. Here, we will store all the information about the countries that you will be able to create in the future.
 
-En esta base de datos almacenaras por cada pais : 
-- codigo
-- nombre 
-- capital 
-- moneda 
-- idiomas (se usara un array, debido a que pueden ser varios idiomas en el mismo pais)
-- continente.
+For each country, you will store:
+- code
+- name
+- capital
+- currency
+- languages
+- continent.
 
 ![Alt text](<images/Captura desde 2024-01-17 20-47-46.png>)
 
-
-para acceder a la base de datos utiliza en mongo compass el enlace:
+To access the database, use the following link in Mongo Compass:
 ```bash
 mongodb+srv://<user>:<password>@cluster0.sxdtfez.mongodb.net/GeoApp
+
 ```
-## Uso
-- para correr el servidor utiliza dentro de la terminal de server el comando:
+## Usage
+- To run the server, use the following command within the `server` terminal:
 ```bash
 nodemon index.js
 ```
-- luego para abrir GeoApp, usa el comando en la terminal cliente:
+- Then, to open GeoApp, use the command in the `client` terminal:
 ```bash
 npm run dev
 ```
-y selecciona el enlace.
+and select the link.
 
 
-## Estado del Proyecto
-El proyecto continua en desarrollo, en futuras versiones, podras implementar la creacion de paises e interactuar con ellos, te estaremos actualizando e informando 😃.
-## Integrantes
+## Project Status
+The project is still in development. In future versions, you will be able to implement functions to update and delete countries, thus interacting with them in a better way. We will keep you updated and informed 😃.
+## Team Members
 - Deivy Patiño
 - Samuel Zapata
 - Juan Diego Barrera
 - Brallam Delgado
 
-## Contacto
-cualquier problema o duda contactanos por medio de nuestro correo:
+## Contact
+For any issues or questions, contact us via email:
 
 deivypr28@gmail.com
 

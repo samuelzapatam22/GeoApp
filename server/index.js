@@ -1,11 +1,13 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const mongoose = require('mongoose')
-require('./models/country')
+const cors = require('cors')
 
 const app = express()
 const PORT = 3001
 
+app.use(express.json())
+app.use(cors())
 app.use(bodyParser.json())
 
 const countryRoutes = require('./routes/countries')
