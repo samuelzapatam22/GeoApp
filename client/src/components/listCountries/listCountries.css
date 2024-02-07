@@ -31,9 +31,16 @@
     box-shadow: 10px 20px 10px 5px #000;
 }
 
-.popup {
-  bottom: 0;
-  right: 0;
+.country-details {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
   width: 200px;
-  height: 200px;
+  background-color: #ddddddab;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }
+
