@@ -4,6 +4,10 @@ import SliderBar from '../sliderBar/SliderBar';
 import SearchBar from "../searchBar/SearchBar.jsx";
 import './listCountries.css'
 import Swal from "sweetalert2";
+<<<<<<< Updated upstream
+=======
+import 'boxicons'
+>>>>>>> Stashed changes
 
 function ListCountries() {
   const [lists, setList] = useState([]);
@@ -47,14 +51,32 @@ function ListCountries() {
       </div>
       {selectedCountry && (
         <div className="country-details">
+<<<<<<< Updated upstream
           <h2>{selectedCountry.name}</h2>
           <p>Currency: {selectedCountry.currency}</p>
           <button onClick={() => handleCloseDetails()}>cerrar</button>
+=======
+           <button className='btn-close' onClick={() => handleCloseDetails()}><box-icon name="x"></box-icon></button>
+          <h2>{selectedCountry.name}</h2>
+          <div className='head-popup'>
+          <img src={`https://flagsapi.com/${selectedCountry.code}/flat/64.png`} alt={selectedCountry.name} />
+          <h2>{selectedCountry.continent}</h2>
+          </div>
+          <div className='details-container'>
+          <p>Currency: <span>{selectedCountry.currency}</span></p>
+          <p>Language: <span>{selectedCountry.languages}</span></p>
+          <p>Capital: <span>{selectedCountry.capital}</span></p>
+          </div>
+>>>>>>> Stashed changes
         </div>
       )}
     </div>
   );
 }
 
+<<<<<<< Updated upstream
 export default ListCountries;
 
+=======
+export default ListCountries;
+>>>>>>> Stashed changes
