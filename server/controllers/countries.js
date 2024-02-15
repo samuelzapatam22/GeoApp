@@ -11,7 +11,6 @@ const getCountry = async(req,res) => {
 }
 
 
-
 const createCountry = async (req,res) => {
      try {
         const{code,name,capital,currency,languages,continent} = req.body

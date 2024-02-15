@@ -1,37 +1,38 @@
 .container-ListCountries {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
 }
 
 .ListCountries {
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  gap: 11px;
-  width: 72vw;
-  padding: 20px;
-  cursor: pointer;
+display: grid;
+grid-template-columns: repeat(4, 2fr);
+gap: 11px;
+width: 72vw;
+padding: 20px;
+cursor: pointer;
 }
 
 @media screen and (max-width: 800px){
-  .ListCountries{
-    grid-template-columns: repeat(2, 1fr);
-  }
+.ListCountries{
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 .ListCountriesItem {
-    margin: 10px;
-    background-color: #ffffff34;
-    border-radius: 16px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 10px 20px 10px 5px #000;
+  margin: 10px;
+  background-color: #471e1e34;
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 10px 20px 10px 5px #000;
 }
 
 .country-details {
+<<<<<<< Updated upstream
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -44,3 +45,27 @@
   border: 1px solid #ddd;
 }
 
+=======
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 5;
+width: 200px;
+background-color: #dddddd;
+color: #000;
+padding: 20px;
+border-radius: 10px;
+border: 1px solid #ddd;
+}
+
+.head-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close {
+  margin-left: 170px;
+  background: none;
+}
+>>>>>>> Stashed changes
