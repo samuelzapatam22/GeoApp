@@ -3,12 +3,15 @@ import "./SearchBar.css";
 const SearchBar = ({ handleSearch }) => {
     return (
       <div className="SearchBar">
-        <input
+        <div className="head-input">
+        <input className="input-SearchBar"
           name="query"
           type="text"
-          placeholder="Countries..."
+          placeholder="País"
           onChange={handleSearch}
         />
+        </div>
+        <button className="Button">Buscar</button>
       </div>
     );
   };

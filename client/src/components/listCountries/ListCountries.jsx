@@ -55,8 +55,8 @@ function ListCountries() {
           {filteredLists.map((list) => (
             <div key={list._id} className='ListCountriesItem' onClick={() => handleCountryClick(list)}>
               <img src={`https://flagsapi.com/${list.code}/flat/64.png`} alt={list.name} />
-              <p>{list.name}</p>
-              <p>{list.continent?.name}</p>
+              <h2>{list.name}</h2>
+              <p>{list.continent}</p>
             </div>
           ))}
         </div>
@@ -68,6 +68,7 @@ function ListCountries() {
           <div className='head-popup'>
             <img src={`https://flagsapi.com/${selectedCountry.code}/flat/64.png`} alt={selectedCountry.name} />
             <h2>{selectedCountry.continent?.name}</h2>
+      
           </div>
           <div className='details-container'>
             <p>Currency: <span>{selectedCountry.currency}</span></p>

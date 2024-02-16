@@ -21,14 +21,18 @@ cursor: pointer;
   grid-template-columns: repeat(2, 1fr);
 }
 }
-
+.ListCountriesItem p{
+  color: gray;
+  font-size: medium;
+}
 .ListCountriesItem {
   margin: 10px;
-  background-color: #471e1e34;
+  background-color: #ffffff;
   border-radius: 16px;
   padding: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 10px 20px 10px 5px #000;
+  color: rgb(80, 80, 236);
+  box-shadow: 3px 3px 4px #0000004b;
+  font-size: small;
 }
 
 .country-details {
