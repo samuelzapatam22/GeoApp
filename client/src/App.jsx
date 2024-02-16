@@ -9,26 +9,32 @@ import ListCountries from './components/listCountries/ListCountries'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
-const GET_ALL_COUNTRIES = gql`
-query countries{
-  countries {
-    code
-    name
-    continent {
+export const GET_COUNTRY = gql`
+  query GetCountry($code: ID!) {
+    country(code: $code) {
+      code
       name
-    }
-    languages {
-      name
+      capital
+      languages {
+        name
+      }
+      continent {
+        name
+      }
     }
   }
-}
-`
+`;
 
 function App() {
-  const { data, loading, error } = useQuery(GET_ALL_COUNTRIES)
+  const [selectedCountry, setSelectedCountry] = useState(null); 
 
-  if (loading) return <p>loading..</p>
-  if (error) return <p>Error..{error.message}</p>
+  const { loading, error, data } = useQuery(GET_COUNTRY, {
+    variables: { code: selectedCountry || ''  },
+  });
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
 
   return (
     <div className='container'>
