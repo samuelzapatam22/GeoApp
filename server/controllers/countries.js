@@ -33,4 +33,32 @@ const createCountry = async (req,res) => {
          
       }
  }
- module.exports={createCountry,getCountry}
+
+ const getCountryByCode = async (req, res) => {
+   try {
+     const country = await Country.findOne({ code: req.params.code });
+     res.json(country);
+   } catch (error) {
+     console.log('Error al obtener país por código', error);
+     res.status(500).json({ message: 'Server error' });
+   }
+ };
+
+ const upDateCountries = async(req, res) => {
+   try {
+      const {code, name, capital, currency, languages, continent} = req.body
+      await Country.findByIdAndUpdate(req.params.id, {
+         code,
+         name,
+         capital,
+         currency,
+         languages,
+         continent
+      })
+      res.json({message: "user updated succes"})
+   } catch (error) {
+      console.log('error al actualizar usuario', error);
+      res.status(500)
+   }
+ }
+ module.exports={createCountry,getCountry, getCountryByCode, upDateCountries }
