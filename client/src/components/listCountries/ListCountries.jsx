@@ -25,10 +25,34 @@ function ListCountries() {
     getCountry();
   }, []);
 
+  const fetchImages = async (country) => {
+    const searchTerm = `landscape ${country.name}`;
+    const pixabayResponse = await axios.get(`https://pixabay.com/api/?key=41410303-8519e05926d07343adf71a333&q=${searchTerm}&image_type=photo&category=places`);
+    const imageHits = pixabayResponse.data.hits;
+    const imageURL = imageHits.length > 0 ? imageHits[0].webformatURL : ''; 
+    return imageURL;
+  };
+
+  useEffect(() => {
+    const fetchCountriesWithImages = async () => {
+      const promises = filteredLists.map(async (country) => {
+        const imageURL = await fetchImages(country);
+        return {
+          ...country,
+          imageURL: imageURL
+        };
+      });
+      const countriesWithImages = await Promise.all(promises);
+      setFilteredLists(countriesWithImages);
+    };
+
+    fetchCountriesWithImages();
+  }, [lists]);
+
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     if (!query) {
-      setFilteredLists(lists); // Mostrar la lista completa si el campo de búsqueda está vacío
+      setFilteredLists(lists); 
     } else {
       const filtered = lists.filter(
         (item) =>
@@ -55,6 +79,7 @@ function ListCountries() {
           {filteredLists.map((list) => (
             <div key={list._id} className='ListCountriesItem' onClick={() => handleCountryClick(list)}>
               <img src={`https://flagsapi.com/${list.code}/flat/64.png`} alt={list.name} />
+              <img src={list.imageURL} className='img-country' alt={list.name} />
               <h2>{list.name}</h2>
               <p>{list.continent}</p>
             </div>
@@ -67,6 +92,7 @@ function ListCountries() {
           <h2>{selectedCountry.name}</h2>
           <div className='head-popup'>
             <img src={`https://flagsapi.com/${selectedCountry.code}/flat/64.png`} alt={selectedCountry.name} />
+            <img src={selectedCountry.imageURL} className='img-country' alt={selectedCountry.name} />
             <h2>{selectedCountry.continent?.name}</h2>
       
           </div>
@@ -82,3 +108,4 @@ function ListCountries() {
 }
 
 export default ListCountries;
+ 
