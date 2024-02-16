@@ -36,9 +36,8 @@ function App() {
       <div className='content'>
         <Routes>
           <Route path='/*' element={<SliderBar />} />
-          <Route path='/' element={<Home />}  />
+          <Route path='/' element={<ListCountries />}  />
           <Route path='/create' element={<CreateCountryForm />} />
-          <Route path='/home' element={<ListCountries />} />
           <Route path='/update' element={<UpdateCountryForm />} />
         </Routes>
         </div>
