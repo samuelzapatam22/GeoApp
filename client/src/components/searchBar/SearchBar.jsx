@@ -1,22 +1,16 @@
 import "./SearchBar.css";
 
-const SearchBar = (/* { onSearch } */) => {
-
-/*     const [filterList, setFilterList] = useState(list);
- */
-   /*  const handleSearch = (event) => {
-        if (event.target.value === "") {
-        } else {
-            
-        }
-    }; */
-
+const SearchBar = ({ handleSearch }) => {
     return (
-        <div className='SearchBar'>
-            <input name='query' type='text'  placeholder='Countries...' /* onChange={ handleSearch } */ />
-            <button className='Button' >Search</button>
-        </div>
+      <div className="SearchBar">
+        <input
+          name="query"
+          type="text"
+          placeholder="Countries..."
+          onChange={handleSearch}
+        />
+      </div>
     );
-};
+  };
 
 export default SearchBar;
