@@ -109,9 +109,9 @@ function ListCountries() {
           </div>
           </div>
           <div className='details-container'>
-            <p>Currency: <span>{selectedCountry.currency}</span></p>
-            <p>Language: <span>{selectedCountry.languages}</span></p>
-            <p>Capital: <span>{selectedCountry.capital}</span></p>
+          <p className='p-details'>Capital: <span>{selectedCountry.capital}</span></p>
+            <p className='p-details'>Currency: <span>{selectedCountry.currency}</span></p>
+            <p className='p-details'>Language: <span>{selectedCountry.languages}</span></p>
           </div>
         </div>
       )}

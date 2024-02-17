@@ -90,3 +90,13 @@ cursor: pointer;
   border-radius: 20px;
   margin-left: 20px;
 }
+
+.p-details {
+  color: rgb(54, 130, 192);
+  margin-bottom: 10px
+}
+
+span {
+  color: #000000c2;
+  margin-left: 10px;
+}
