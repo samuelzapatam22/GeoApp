@@ -34,7 +34,6 @@ function UpdateCountryForm() {
       await axios.put(`http://localhost:3001/api/countries/upDateCountriesId/${countryData._id}`, countryData);
       console.log('País actualizado exitosamente');
       setupDate(true)
-      // Puedes hacer algo después de actualizar el país, como mostrar un mensaje o redirigir a otra página
     } catch (error) {
       console.error('Error al actualizar país', error);
     }
@@ -44,35 +43,50 @@ function UpdateCountryForm() {
     <div className='slider-bar'>
       <SliderBar />
       <div className='UpdateCountryForm'>
-        <div className='container-form-create'>
-          <h1 className='title'>Update Country</h1>
+        <div className='container-form-update'>
           <form onSubmit={handleSubmit}>
             <div className='field-code'>
               <label>Code country</label>
               <input type="text" name='code' placeholder='Code' value={countryData.code} onChange={handleChange} />
-              <button className='btn-consult' onClick={handleConsult}>Consult</button>
+              <button className='btn-consult' onClick={handleConsult}>Consultar</button>
             </div>
             <div className='field-form-update'>
-              <label>Name</label>
-              <input type="text" name="name" placeholder='Name' value={countryData.name} onChange={handleChange} />
-              <label>Capital</label>
-              <input type="text" name="capital" placeholder='Capital' value={countryData.capital} onChange={handleChange} />
-              <label>Languages</label>
-              <input type="text" name="languages" placeholder='Languages' value={countryData.languages} onChange={handleChange} />
-              <label>Currency</label>
-              <input type="text" name="currency" placeholder='Currency' value={countryData.currency} onChange={handleChange} />
-              <label>Continent</label>
-              <input type="text" name="continent" placeholder='Continent' value={countryData.continent} onChange={handleChange} />
-            </div>
-            <div className='buttons'>
-              <button className='btn-clean'>Delete</button>
-              <button type="submit" className='btn-create'>Update</button>
-            </div>
-            {upDate && <p>pais actualizado</p>}
-          </form>
-        </div>
-      </div>
+  <div className='box'>
+    <div className='input-group'>
+      <label>Nombre</label>
+      <input type="text" name="name" placeholder='Name' value={countryData.name} onChange={handleChange} />
     </div>
+    <div className='input-group'>
+      <label>Capital</label>
+      <input type="text" name="capital" placeholder='Capital' value={countryData.capital} onChange={handleChange} />
+    </div>
+  </div>
+  <div className='box'>
+  <div className='input-group'>
+    <label>Lengua</label>
+    <input type="text" name="languages" placeholder='Languages' value={countryData.languages} onChange={handleChange} />
+  </div>
+  <div className='input-group'>
+    <label>Moneda</label>
+    <input type="text" name="currency" placeholder='Currency' value={countryData.currency} onChange={handleChange} />
+  </div>
+  </div>
+  <div className='box'>
+  <div className='input-group'>
+    <label>Continente</label>
+    <input type="text" name="continent" placeholder='Continent' value={countryData.continent} onChange={handleChange} />
+  </div>
+  </div>
+</div>
+<div className='buttons'>
+  <button className='btn-clean'>Eliminar</button>
+  <button type="submit" className='btn-create'>Actualizar</button>
+</div>
+{upDate && <p>pais actualizado</p>}
+</form>
+</div>
+</div>
+</div>
   )
 }
 

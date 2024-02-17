@@ -13,14 +13,11 @@ body {
     max-width: 100%;
     width: 500px;
     padding: 20px;
-}
-
-.title {
-    text-align: center;
+    color: #000;
+    margin-left: 200px;
 }
 
 input {
-    width: 100%;
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -80,4 +77,19 @@ button {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
 }
