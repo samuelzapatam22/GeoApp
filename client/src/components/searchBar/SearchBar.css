@@ -1,40 +1,39 @@
 .SearchBar {
   background-color: #ffff;
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px;
-    width: 60%;
-    height: 50px;
-    border-radius: 40px;
-  }
-  
-  input[name="query"] {
-    padding: 10px;
-    margin-right: 20px;
-    width: 300px;
-    border: none;
-    margin-left: 15px;
-    transform: translateY(5px);
-    
-  }
-  .input-SearchBar:focus{
-    border-bottom:1px solid blue;
-    box-shadow: none;
-    
-  }
-  
-  
-  .Button{
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 40px;
-    background: rgb(43, 85, 224);
-    color: #ffff;
-    width: 100px;
-    height: 35px;
-    right: 0;
-    margin-left: 0;
-    transform: translateY(5px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 10px;
+  width: 60%;
+  height: 50px;
+  border-radius: 40px;
+  position: fixed;
+  top: 20px;
+}
 
-  }
+.input-SearchBar {
+  padding: 10px;
+  margin-right: 20px;
+  width: calc(100% - 120px); 
+  border: none;
+  margin-left: 15px;
+  transform: translateY(5px);
+}
+
+.input-SearchBar:focus {
+  border-bottom: 1px solid blue;
+  box-shadow: none;
+}
+
+.Button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  background: rgb(94, 130, 248);
+  color: #ffff;
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  transform: translateY(5px);
+}
