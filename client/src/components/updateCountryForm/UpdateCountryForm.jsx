@@ -24,6 +24,9 @@ function UpdateCountryForm() {
     e.preventDefault();
     try {
       const response = await axios.get(`http://localhost:3001/api/countries/getCountriesId/${countryData.code}`);
+      setTimeout(()=>{
+        setupDate('');
+      }, 3000);
       setCountryData(response.data);
     } catch (error) {
       console.error('Error al consultar país', error);
@@ -37,7 +40,7 @@ function UpdateCountryForm() {
       console.log('País actualizado exitosamente');
       setupDate(true)
       setTimeout(() => {
-        setDeleteCountry('');
+        setupDate('');
       }, 3000);
     } catch (error) {
       console.error('Error al actualizar país', error);
