@@ -93,3 +93,25 @@ button {
 .input-group label {
     margin-bottom: 0.5rem;
 }
+
+
+.alert-delete {
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Alineación del texto al centro */
+  }
+
+  .alert-upDate{
+    background-color: #4cf436; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center;
+  }
+  

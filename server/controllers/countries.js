@@ -61,4 +61,15 @@ const createCountry = async (req,res) => {
       res.status(500)
    }
  }
- module.exports={createCountry,getCountry, getCountryByCode, upDateCountries }
+
+ const deleteCountry = async(req, res) => {
+   try {
+      await Country.findByIdAndDelete(req.params.id)
+      res.json({message: "user deleted success"})
+   } catch (error) {
+      console.log('error trying delete Country');
+        res.status(500).json({error: "error al eliminar usuario"})
+   }
+ }
+
+ module.exports={createCountry,getCountry, getCountryByCode, upDateCountries, deleteCountry }
