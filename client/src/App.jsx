@@ -40,9 +40,9 @@ function App() {
   return (
     <div className='container'>
       <Router>
+        <SliderBar />
       <div className='content'>
         <Routes>
-          <Route path='/*' element={<SliderBar />} />
           <Route path='/' element={<ListCountries />}  />
           <Route path='/create' element={<CreateCountryForm />} />
           <Route path='/update' element={<UpdateCountryForm />} />

@@ -73,7 +73,6 @@ function ListCountries() {
 
   return (
     <div className='slider-bar'>
-      <SliderBar />
       <div className='container-ListCountries'>
         <SearchBar handleSearch={handleSearch} />
         <div className='ListCountries'>

@@ -112,7 +112,6 @@ function CreateCountryForm() {
   
   return (
     <div className='slider-bar'>
-    <SliderBar />
     <div className='CreateCountryForm'>
       <div className='container-form-create'>
         <form onSubmit={createCountry}>

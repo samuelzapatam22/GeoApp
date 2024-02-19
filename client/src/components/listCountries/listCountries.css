@@ -4,7 +4,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  height: calc(100vh - 20px); 
+  margin-bottom: 40px;
+  z-index: 1;
+  margin-top: 60px;
 }
 
 .ListCountries {
@@ -14,6 +17,8 @@ gap: 11px;
 width: 72vw;
 padding: 20px;
 cursor: pointer;
+height: calc(100vh - 40px);
+
 }
 
 @media screen and (max-width: 800px){

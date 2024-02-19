@@ -85,7 +85,6 @@ function UpdateCountryForm() {
 
   return (
     <div className='slider-bar'>
-      <SliderBar />
       <div className='UpdateCountryForm'>
         <div className='container-form-update'>
           <form onSubmit={handleSubmit}>
