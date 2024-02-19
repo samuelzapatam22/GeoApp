@@ -11,6 +11,14 @@
   position: fixed;
   top: 20px;
 }
+.continents{
+  display: flex;
+}
+
+.boxx {
+  flex-direction: column;
+}
+
 
 .input-SearchBar {
   padding: 10px;

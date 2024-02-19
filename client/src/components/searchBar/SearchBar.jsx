@@ -44,12 +44,35 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
             <p className="limpiar" onClick={limpiar}>Limpiar</p>
             </div>
             <div className="container-popup">
+              <div className="continents">
+                <div className="boxx">
               <img className="europa" src={europa} alt="" onClick={() => handleContinentClick('Europe')} />
+              <p>Europa</p>
+              </div>
+              <div className="boxx">
               <img className="asia" src={asia} alt="" onClick={() => handleContinentClick('Asia')} />
+              <p>Asia</p>
+              </div>
+              <div className="boxx">
               <img className="oceania" src={oceania} alt="" onClick={() => handleContinentClick('Oceania')} />
+              <p>Oceania</p>
+              </div>
+              <div className="continents">
+              <div className="boxx">
               <img className="n-america" src={namerica} alt="" onClick={() => handleContinentClick('North America')} />
+               <p>Norte America</p>
+               </div>
+               <div className="boxx">
               <img className="s-america" src={samerica} alt="" onClick={() => handleContinentClick('South America')} />
-              <img className="africa" src={africa} alt="" onClick={() => handleContinentClick('Africa')} />
+              <p>Sur America</p>
+              </div>
+              <div className="boxx">
+              <img className="africa" src={africa} alt="" onClick={() => handleContinentClick('Africa')} /> 
+              <p>Africa</p>
+              </div>
+              </div>
+              </div>
+              
             </div>
           </div>
         </div>

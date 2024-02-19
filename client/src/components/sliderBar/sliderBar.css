@@ -30,7 +30,7 @@
     background-color: #fff;
 }
 
-/* Media query para pantallas pequeñas */
+
 @media screen and (max-width: 768px) {
     .sliderBar {
         width: 100%;
@@ -38,5 +38,10 @@
         bottom: 0;
         top: auto;
         flex-direction: row;
+        justify-content: center;
+    }
+
+    .sliderBar a {
+        margin-right: 10px;
     }
 }
