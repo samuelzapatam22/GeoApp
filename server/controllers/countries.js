@@ -55,9 +55,9 @@ const createCountry = async (req,res) => {
          languages,
          continent
       })
-      res.json({message: "user updated succes"})
+      res.json({message: "Pais updated succes"})
    } catch (error) {
-      console.log('error al actualizar usuario', error);
+      console.log('error al actualizar pais', error);
       res.status(500)
    }
  }
@@ -68,7 +68,7 @@ const createCountry = async (req,res) => {
       res.json({message: "user deleted success"})
    } catch (error) {
       console.log('error trying delete Country');
-        res.status(500).json({error: "error al eliminar usuario"})
+        res.status(500).json({error: "error al eliminar pais"})
    }
  }
 

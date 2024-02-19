@@ -27,38 +27,70 @@ function CreateCountryForm() {
       setContinent(countryData.continent.name);
     },
     onError: (error) => {
-      console.error('Error fetching country:', error);
-      setErrorMessage('Error al obtener la información del país. Verifica el código e inténtalo nuevamente.');
+      console.error('error:', error);
+      setErrorMessage('error al obtener la información del país');
       setTimeout(() => {
         setErrorMessage('');
       }, 2000);
     },
   });
 
-  const handleConsultClick = () => {
-    getCountry({ variables: { code } });
+  const handleConsultClick = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3001/api/countries/getCountriesId/${code}`);
+      if (response.data) {
+        setErrorMessage('El país ya existe en la base de datos');
+        setTimeout(() => {
+          setErrorMessage('');
+        }, 2000);
+      } else {
+        getCountry({ variables: { code } });
+      }
+    } catch (error) {
+      console.error('Error fetching country:', error);
+      setErrorMessage('error al obtener la información del país');
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 2000);
+    }
   };
+  
 
-  const createCountry = async(e) => {
-    e.preventDefault()
-    
+  const createCountry = async (e) => {
+    e.preventDefault();
+  
+    if (!name || !capital || !languages || !currency || !continent) {
+      setErrorMessage('completa todos los campos.');
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 2000);
+      return;
+    }
+
+    if (!data || !data.country || !code || !name || !capital || !languages || !currency || !continent) {
+      setErrorMessage('consulta un país válido antes de crearlo');
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 2000);
+      return;
+    }
+  
     const countryData = {
       code,
       name,
       capital,
-      languages, 
+      languages,
       currency,
       continent
     }
-
+  
     setCode('');
     setName('');
     setCapital('');
     setLanguages('');
     setCurrency('');
     setContinent('');
-
-
+  
     try {
       const response = await axios.post('http://localhost:3001/api/countries/create', countryData);
       console.log(response.data);
@@ -71,13 +103,13 @@ function CreateCountryForm() {
     } catch (error) {
       console.error('Error creating country:', error);
       setCreated(false);
-      setErrorMessage('Error al crear el país. Verifica los datos e inténtalo nuevamente.');
+      setErrorMessage('Error al crear el país');
       setTimeout(() => {
         setErrorMessage('');
       }, 2000);
     }
   }
-
+  
   return (
     <div className='slider-bar'>
     <SliderBar />

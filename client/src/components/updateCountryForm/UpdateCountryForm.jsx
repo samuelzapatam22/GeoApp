@@ -5,6 +5,7 @@ import SliderBar from '../sliderBar/SliderBar';
 
 function UpdateCountryForm() {
   const [upDate, setupDate] = useState(false)
+  const [countryNoFind, setCountryNofind] = useState(false)
   const [countryData, setCountryData] = useState({
     code: '',
     name: '',
@@ -24,14 +25,28 @@ function UpdateCountryForm() {
     e.preventDefault();
     try {
       const response = await axios.get(`http://localhost:3001/api/countries/getCountriesId/${countryData.code}`);
-      setTimeout(()=>{
-        setupDate('');
-      }, 3000);
-      setCountryData(response.data);
+      if (response.data) {
+        setCountryData(response.data);
+      } else {
+        setCountryNofind(true)
+        setTimeout(()=> {
+          setCountryNofind('')
+        },3000)
+        console.log('País no encontrado');
+        setCountryData({
+          code: '',
+          name: '',
+          capital: '',
+          currency: '',
+          languages: '',
+          continent: '',
+        });
+      }
     } catch (error) {
       console.error('Error al consultar país', error);
     }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,6 +128,7 @@ function UpdateCountryForm() {
 </div>
 {upDate && <p className='alert-upDate'>pais actualizado</p>}
 {deleteCountry && <p className='alert-delete'>Pais eleminado</p>}
+{countryNoFind && <p className='alert-no-find'>Pais no encontrado</p>}
 </form>
 </div>
 </div>

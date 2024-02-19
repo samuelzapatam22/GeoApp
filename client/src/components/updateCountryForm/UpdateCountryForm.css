@@ -1,7 +1,6 @@
 body {
     background-color: #cad9f0;
     color: #fff;
-    overflow-y: hidden;
 }
 
 
@@ -96,22 +95,40 @@ button {
 
 
 .alert-delete {
-    background-color: #f44336; /* Color de fondo rojo */
-    color: white; /* Color del texto blanco */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-top: 10px; /* Margen superior */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    text-align: center; /* Alineación del texto al centro */
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #f44336; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px; 
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
   }
 
   .alert-upDate{
-    background-color: #4cf436; /* Color de fondo rojo */
-    color: white; /* Color del texto blanco */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-top: 10px; /* Margen superior */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #31c21e; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     text-align: center;
   }
   
+  .alert-no-find {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #71fa02; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }

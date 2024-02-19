@@ -87,3 +87,30 @@ button {
 .input-group label {
     margin-bottom: 0.5rem;
 }
+
+
+.success-message {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #35aa31; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #d63434; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
