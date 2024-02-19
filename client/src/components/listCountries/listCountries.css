@@ -100,3 +100,8 @@ span {
   color: #000000c2;
   margin-left: 10px;
 }
+
+.card-active {
+  background-color: #8ca5dd; 
+  color: white;
+}

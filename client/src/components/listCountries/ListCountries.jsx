@@ -78,7 +78,7 @@ function ListCountries() {
         <SearchBar handleSearch={handleSearch} />
         <div className='ListCountries'>
           {filteredLists.map((list) => (
-            <div key={list._id} className='ListCountriesItem' onClick={() => handleCountryClick(list)}>
+           <div className={`ListCountriesItem ${selectedCountry === list ? 'card-active' : ''}`} onClick={() => handleCountryClick(list)}>
               <div className='image-head'>
               <img src={list.imageURL} className='img-country' alt={list.name} />
               </div>
@@ -96,7 +96,7 @@ function ListCountries() {
         </div>
       </div>
       {selectedCountry && (
-        <div className="country-details">
+        <div className={`country-details ${selectedCountry ? 'show-details' : ''}`}>
           <button className='btn-close' onClick={() => handleCloseDetails()}><box-icon name="x"></box-icon></button>
           <img src={selectedCountry.imageURL} className='img-country-details' alt={selectedCountry.name} />
           <div className='head-popup'>
