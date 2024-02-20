@@ -129,14 +129,14 @@ function CreateCountryForm() {
               </div>
               <div className='input-group'>
                 <label>Capital</label>
-                <input type="text" name="capital" required value={capital} onChange={e => setCapital(e.target.value)} placeholder='Capital' />
+                <input type="text" name="capital" disabled required value={capital} onChange={e => setCapital(e.target.value)} placeholder='Capital' />
               </div>
             </div>
             
             <div className='box'>
               <div className='input-group'>
                 <label>Languages</label>
-                <input type="text" name="languages" required value={languages} onChange={e => setLanguages(e.target.value)} placeholder='Languages' />
+                <input type="text" name="languages" disabled required value={languages} onChange={e => setLanguages(e.target.value)} placeholder='Languages' />
               </div>
               <div className='input-group'>
                 <label>Currency</label>
@@ -147,7 +147,7 @@ function CreateCountryForm() {
             <div className='box'>
               <div className='input-group'>
                 <label>Continent</label>
-                <input type="text" name="continent" required value={continent} onChange={e => setContinent(e.target.value)} placeholder='Continent' />
+                <input type="text" name="continent" disabled required value={continent} onChange={e => setContinent(e.target.value)} placeholder='Continent' />
               </div>
             </div>
             
