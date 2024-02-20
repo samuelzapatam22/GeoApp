@@ -1,23 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import no_found from '../../assets/not_found.png'
-import SliderBar from '../sliderBar/SliderBar';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import no_found from "../../assets/not_found.png";
+import SliderBar from "../sliderBar/SliderBar";
 import SearchBar from "../searchBar/SearchBar.jsx";
-import './listCountries.css'
-import 'boxicons'
+import "./listCountries.css";
+import "boxicons";
 
 function ListCountries() {
   const [lists, setLists] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [filteredLists, setFilteredLists] = useState([]);
-
   useEffect(() => {
     const getCountry = async () => {
       try {
         const response = await axios.get('http://localhost:3001/api/countries/getCountries');
-        setLists(response.data);
-        setFilteredLists(response.data);
-        console.log(response.data);
+        const countriesWithImages = await Promise.all(response.data.map(async (country) => {
+          const imageURL = await fetchImages(country);
+          return {
+            ...country,
+            imageURL: imageURL
+          };
+        }));
+        setLists(countriesWithImages);
+        setFilteredLists(countriesWithImages);
+        console.log(countriesWithImages);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -34,26 +40,15 @@ function ListCountries() {
     return imageURL;
   };
 
-  useEffect(() => {
-    const fetchCountriesWithImages = async () => {
-      const promises = filteredLists.map(async (country) => {
-        const imageURL = await fetchImages(country);
-        return {
-          ...country,
-          imageURL: imageURL
-        };
-      });
-      const countriesWithImages = await Promise.all(promises);
-      setFilteredLists(countriesWithImages);
-    };
-
-    fetchCountriesWithImages();
-  }, [lists]);
-
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     if (!query) {
       setFilteredLists(lists); 
+      if(selectedContinent){
+        setFiltered(countriesByContinent,[selectedContinent])
+      }else{
+        setFileteredLists(lists)
+      }
     } else {
       const filtered = lists.filter(
         (item) =>
@@ -119,4 +114,3 @@ function ListCountries() {
 }
 
 export default ListCountries;
- 

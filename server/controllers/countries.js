@@ -43,6 +43,16 @@ const createCountry = async (req,res) => {
      res.status(500).json({ message: 'Server error' });
    }
  };
+ const getCountriesByContinent = async (req, res) => {
+   try {
+     const { continent } = req.params;
+     const countries = await Country.find({ continent: continent });
+     res.json(countries);
+   } catch (error) {
+     console.error('Error fetching countries by continent:', error);
+     res.status(500).json({ message: 'Server error' });
+   }
+ }; 
 
  const upDateCountries = async(req, res) => {
    try {
@@ -72,4 +82,4 @@ const createCountry = async (req,res) => {
    }
  }
 
- module.exports={createCountry,getCountry, getCountryByCode, upDateCountries, deleteCountry }
+ module.exports={createCountry,getCountry, getCountryByCode,getCountriesByContinent, upDateCountries, deleteCountry }

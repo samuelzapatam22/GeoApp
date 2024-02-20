@@ -1,11 +1,26 @@
 import "./SearchBar.css";
 import { useState } from "react";
+import axios from 'axios';
+import samerica from '../../assets/AMERICA.png'
+import europa from '../../assets/EUROPA.jpg'
+import africa from '../../assets/AFRICA.jpg'
+import asia from '../../assets/ASIA.jpg'
+import oceania from '../../assets/OCEANIA.jpg'
+import namerica from '../../assets/NAMERICA.jpeg'
 
-const SearchBar = ({ handleSearch }) => {
+
+
+
+const SearchBar = ({ handleSearch, setSelectedContinent }) => {
   const [showPopup, setShowPopup] = useState(false);
 
+  const handleContinentClick = (continent) => {
+    setSelectedContinent(continent);
+    setShowPopup(!showPopup);
+  };
+
   const handleButtonClick = () => {
-    setShowPopup(!showPopup); 
+    setShowPopup(!showPopup);
   };
 
   return (
@@ -21,16 +36,22 @@ const SearchBar = ({ handleSearch }) => {
       {showPopup && (
         <div className="popup">
           <div className="head-continent-popup">
-          <h3>filtrar por continentes</h3>
-          <div className="container-popup">
-            <img className="asia" src="https://thumbs.dreamstime.com/b/europa-continente-con-los-contornos-de-pa%C3%ADses-dibujo-vectorial-forma-del-plan-distrito-la-isla-norte-sobre-fondo-blanco-l%C3%ADnea-226176348.jpg" alt="" />
-          </div>
+            <h3>filtrar por continentes</h3>
+            <div className="container-popup">
+              <img className="europa" src={europa} alt="" onClick={() => handleContinentClick('Europe')} />
+              <img className="asia" src={asia} alt="" onClick={() => handleContinentClick('Asia')} />
+              <img className="oceania" src={oceania} alt="" onClick={() => handleContinentClick('Oceania')} />
+              <img className="n-america" src={namerica} alt="" onClick={() => handleContinentClick('North America')} />
+              <img className="s-america" src={samerica} alt="" onClick={() => handleContinentClick('South America')} />
+              <img className="africa" src={africa} alt="" onClick={() => handleContinentClick('Africa')} />
+            </div>
           </div>
         </div>
       )}
     </div>
   );
 };
+
 
 
 export default SearchBar;
