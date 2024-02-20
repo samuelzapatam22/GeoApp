@@ -12,8 +12,11 @@
 
 .ListCountries {
 display: grid;
-grid-template-columns: repeat(4, 2fr);
-gap: 11px;
+grid-template-columns: repeat(
+  auto-fit,
+    minmax(200px, 2fr)
+);
+gap: 0px;
 width: 72vw;
 padding: 20px;
 cursor: pointer;
@@ -23,7 +26,9 @@ height: calc(100vh - 40px);
 
 @media screen and (max-width: 800px){
 .ListCountries{
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(
+    auto-fit,
+  minmax(450px, 1fr));
 }
 }
 .ListCountriesItem p{
