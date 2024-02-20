@@ -1,0 +1,83 @@
+[{
+  "_id": {
+    "$oid": "65a86f50f39e5c2d182763d2"
+  },
+  "code": "CO",
+  "name": "Colombia",
+  "capital": "Medellin",
+  "currency": "COP",
+  "languages": [
+    {
+      "name": "Spanish",
+      "_id": {
+        "$oid": "65a86f50f39e5c2d182763d3"
+      }
+    }
+  ],
+  "continent": {
+    "name": "South America"
+  }
+},
+{
+  "_id": {
+    "$oid": "65a88444f39e5c2d182763d5"
+  },
+  "code": "EC",
+  "name": "Ecuador",
+  "capital": "Quito",
+  "currency": "USD",
+  "languages": [
+    {
+      "name": "Spanish",
+      "_id": {
+        "$oid": "65a88444f39e5c2d182763d6"
+      }
+    }
+  ],
+  "continent": {
+    "name": "South America"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a88498f39e5c2d182763d8"
+  },
+  "code": "BR",
+  "name": "Brazil",
+  "capital": "Brasilia",
+  "currency": "BRL",
+  "languages": [
+    {
+      "name": "Portuguese",
+      "_id": {
+        "$oid": "65a88498f39e5c2d182763d9"
+      }
+    }
+  ],
+  "continent": {
+    "name": "South America"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65a884e9f39e5c2d182763db"
+  },
+  "code": "US",
+  "name": "United States",
+  "capital": "Washington D.C.",
+  "currency": "USD",
+  "languages": [
+    {
+      "name": "English",
+      "_id": {
+        "$oid": "65a884e9f39e5c2d182763dc"
+      }
+    }
+  ],
+  "continent": {
+    "name": "North America"
+  },
+  "__v": 0
+}]

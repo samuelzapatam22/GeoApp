@@ -1,0 +1,83 @@
+.SearchBar {
+  background-color: #ffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center; 
+  margin-right: 10px;
+  width: 60%;
+  height: 50px;
+  border-radius: 40px;
+  position: fixed;
+  top: 20px;
+}
+.continents{
+  display: flex;
+}
+
+.boxx {
+  flex-direction: column;
+}
+
+
+.input-SearchBar {
+  padding: 10px;
+  margin-right: 20px;
+  width: calc(100% - 120px); 
+  border: none;
+  margin-left: 15px;
+  transform: translateY(5px);
+}
+
+.input-SearchBar:focus {
+  border-bottom: 1px solid blue;
+  box-shadow: none;
+}
+
+.Button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  background: rgb(94, 130, 248);
+  color: #ffff;
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  transform: translateY(5px);
+}
+
+
+.popup {
+  position: absolute;
+  top: 60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  color: #000000;
+  box-shadow: 1px 2px 2px 2px #00000044;
+}
+
+.popup img {
+  width: 140px;
+  height: 120px;
+  border: 1px solid #ddd;
+}
+
+.header-popup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-popup p {
+  color: rgb(61, 134, 243);
+}
+
+
+.limpiar:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

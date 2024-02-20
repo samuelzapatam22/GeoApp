@@ -1,0 +1,136 @@
+.UpdateCountryForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 100%;
+    width: 80vw;
+    padding: 20px;
+    color: #000;
+    
+}
+
+@media screen and (max-width: 678px){
+    .UpdateCountryForm{
+        width: 50%;  
+        height: 50%;
+        margin-left: 50px;
+    }
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #ffffffb2;
+}
+
+input::placeholder {
+    color: #00000091;
+}
+
+input:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 19px;
+    border-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.btn-consult {
+    background-color: rgb(29, 79, 153);
+    color: #fff;
+}
+
+.btn-clean {
+    background-color: rgb(153, 17, 17);
+    color: #fff;
+}
+
+.btn-create {
+    background-color: rgb(14, 139, 14);
+    color: #fff;
+}
+
+.field-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+}
+
+
+.alert-delete {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #f44336; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px; 
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+  }
+
+  .alert-upDate{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #31c21e; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }
+  
+  .alert-no-find {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #71fa02; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }

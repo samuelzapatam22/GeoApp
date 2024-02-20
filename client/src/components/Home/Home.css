@@ -1,0 +1,39 @@
+.Home-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #645d5d, #fcfcfc);
+  }
+
+.Home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.Home-main{
+    font-size: 10em;
+    margin-bottom: 40px;
+    font-family: A;
+  }
+  
+.Button-home{
+    text-decoration: none;
+    padding: 10px 20px;
+    width:25vw;
+    background: linear-gradient(to right, #0d0b0e, #221785);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 4.3s ease;
+    color: rgb(231, 231, 231);
+    text-align: center;
+    font-size:x-large;
+  }
+  
+  
+
+ 
