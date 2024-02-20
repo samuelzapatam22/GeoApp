@@ -3,19 +3,41 @@
   padding: 0;
 }
 
+body {
+  background-color: #cad9f0;
+}
+
 .container {
   display: flex;
 }
 
 .slider-bar {
   display: flex;
+  width: 100vw;
+}
+
+@media screen and (max-widht: 678px){
+  .slider-bar{
+    width: 20vw;
+    margin: 0%;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 30vw;
+  }
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-left: 250px;
+  position: absolute;
+}
+
+@media screen and (max-width: 678px){
+  .content{
+    margin-left: 100px;
+  }
 }
 
 .elements {

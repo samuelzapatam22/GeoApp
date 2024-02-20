@@ -33,4 +33,53 @@ const createCountry = async (req,res) => {
          
       }
  }
- module.exports={createCountry,getCountry}
+
+ const getCountryByCode = async (req, res) => {
+   try {
+     const country = await Country.findOne({ code: req.params.code });
+     res.json(country);
+   } catch (error) {
+     console.log('Error al obtener país por código', error);
+     res.status(500).json({ message: 'Server error' });
+   }
+ };
+ const getCountriesByContinent = async (req, res) => {
+   try {
+     const { continent } = req.params;
+     const countries = await Country.find({ continent: continent });
+     res.json(countries);
+   } catch (error) {
+     console.error('Error fetching countries by continent:', error);
+     res.status(500).json({ message: 'Server error' });
+   }
+ }; 
+
+ const upDateCountries = async(req, res) => {
+   try {
+      const {code, name, capital, currency, languages, continent} = req.body
+      await Country.findByIdAndUpdate(req.params.id, {
+         code,
+         name,
+         capital,
+         currency,
+         languages,
+         continent
+      })
+      res.json({message: "Pais updated succes"})
+   } catch (error) {
+      console.log('error al actualizar pais', error);
+      res.status(500)
+   }
+ }
+
+ const deleteCountry = async(req, res) => {
+   try {
+      await Country.findByIdAndDelete(req.params.id)
+      res.json({message: "user deleted success"})
+   } catch (error) {
+      console.log('error trying delete Country');
+        res.status(500).json({error: "error al eliminar pais"})
+   }
+ }
+
+ module.exports={createCountry,getCountry, getCountryByCode,getCountriesByContinent, upDateCountries, deleteCountry }

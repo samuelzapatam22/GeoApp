@@ -1,26 +1,24 @@
-body {
-    background-color: #15171a;
-    color: #fff;
-    overflow-y: hidden;
-}
-
-
 .UpdateCountryForm {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     max-width: 100%;
-    width: 500px;
+    width: 80vw;
     padding: 20px;
+    color: #000;
+    
 }
 
-.title {
-    text-align: center;
+@media screen and (max-width: 678px){
+    .UpdateCountryForm{
+        width: 50%;  
+        height: 50%;
+        margin-left: 50px;
+    }
 }
 
 input {
-    width: 100%;
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -81,3 +79,58 @@ button {
     justify-content: center;
     gap: 1rem;
 }
+
+.box {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+}
+
+
+.alert-delete {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #f44336; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px; 
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+  }
+
+  .alert-upDate{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #31c21e; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }
+  
+  .alert-no-find {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #71fa02; 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+  }
