@@ -9,20 +9,23 @@ import oceania from '../../assets/OCEANIA.jpg'
 import namerica from '../../assets/NAMERICA.jpeg'
 
 
-
-
 const SearchBar = ({ handleSearch, setSelectedContinent }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleContinentClick = (continent) => {
     setSelectedContinent(continent);
-    setShowPopup(!showPopup);
+    setShowPopup(false);
   };
 
   const handleButtonClick = () => {
     setShowPopup(!showPopup);
   };
 
+  const limpiar = () => {
+    setSelectedContinent(null)
+    setShowPopup(false)
+    console.log("limpiando")
+  }
   return (
     <div className="SearchBar">
       <input
@@ -36,7 +39,10 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
       {showPopup && (
         <div className="popup">
           <div className="head-continent-popup">
+            <div className="header-popup">
             <h3>filtrar por continentes</h3>
+            <p className="limpiar" onClick={limpiar}>Limpiar</p>
+            </div>
             <div className="container-popup">
               <img className="europa" src={europa} alt="" onClick={() => handleContinentClick('Europe')} />
               <img className="asia" src={asia} alt="" onClick={() => handleContinentClick('Asia')} />
@@ -51,7 +57,5 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
     </div>
   );
 };
-
-
 
 export default SearchBar;

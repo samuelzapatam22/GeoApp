@@ -125,7 +125,7 @@ function CreateCountryForm() {
             <div className='box'>
               <div className='input-group'>
                 <label>Name</label>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} name="name" required placeholder='Name' />
+                <input type="text" value={name} disabled onChange={e => setName(e.target.value)} name="name" required placeholder='Name' />
               </div>
               <div className='input-group'>
                 <label>Capital</label>

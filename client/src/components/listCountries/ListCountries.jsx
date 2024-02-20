@@ -10,6 +10,8 @@ function ListCountries() {
   const [lists, setLists] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [filteredLists, setFilteredLists] = useState([]);
+  const [selectedContinent, setSelectedContinent] = useState(null);
+
   useEffect(() => {
     const getCountry = async () => {
       try {
@@ -32,6 +34,23 @@ function ListCountries() {
     getCountry();
   }, []);
 
+  useEffect(() => {
+    const fetchCountriesByContinent = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3001/api/countries/filterByContinent/${selectedContinent}`);
+        setFilteredLists(response.data);
+      } catch (error) {
+        console.error('Error fetching countries by continent:', error);
+      }
+    };
+
+    if (selectedContinent) {
+      fetchCountriesByContinent();
+    } else {
+      setFilteredLists(lists);
+    }
+  }, [selectedContinent]);
+
   const fetchImages = async (country) => {
     const searchTerm = `landscape ${country.name}`;
     const pixabayResponse = await axios.get(`https://pixabay.com/api/?key=41410303-8519e05926d07343adf71a333&q=${searchTerm}&image_type=photo&category=places`);
@@ -43,12 +62,7 @@ function ListCountries() {
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     if (!query) {
-      setFilteredLists(lists); 
-      if(selectedContinent){
-        setFiltered(countriesByContinent,[selectedContinent])
-      }else{
-        setFileteredLists(lists)
-      }
+      setFilteredLists(lists);
     } else {
       const filtered = lists.filter(
         (item) =>
@@ -69,7 +83,7 @@ function ListCountries() {
   return (
     <div className='slider-bar'>
       <div className='container-ListCountries'>
-        <SearchBar handleSearch={handleSearch} />
+        <SearchBar handleSearch={handleSearch} setSelectedContinent={setSelectedContinent} />
         <div className='ListCountries'>
           {filteredLists.map((list) => (
            <div className={`ListCountriesItem ${selectedCountry === list ? 'card-active' : ''}`} onClick={() => handleCountryClick(list)}>

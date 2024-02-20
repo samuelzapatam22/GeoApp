@@ -58,3 +58,18 @@
   height: 120px;
   border: 1px solid #ddd;
 }
+
+.header-popup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-popup p {
+  color: rgb(61, 134, 243);
+}
+
+
+.limpiar:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
