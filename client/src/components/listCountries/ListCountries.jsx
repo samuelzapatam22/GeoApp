@@ -38,7 +38,14 @@ function ListCountries() {
     const fetchCountriesByContinent = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/api/countries/filterByContinent/${selectedContinent}`);
-        setFilteredLists(response.data);
+        const countriesWithImagesForContinent = await Promise.all(response.data.map(async (country) => {
+          const imageURL = await fetchImages(country);
+          return {
+            ...country,
+            imageURL: imageURL
+          };
+        }));
+        setFilteredLists(countriesWithImagesForContinent);
       } catch (error) {
         console.error('Error fetching countries by continent:', error);
       }
