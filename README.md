@@ -1,4 +1,5 @@
-# GeoAPP: Your world in one click!!
+# GeoAPP: Your world in one click!! 
+(https://65d7d7a0568a5960edfcb4bb--warm-quokka-e4dd0d.netlify.app/)
 
 **GeoAPP** is a web application designed to offer you an unparalleled experience. This tool allows you to systematically and easily organize your upcoming destinations, providing you with a personalized agenda of the countries you wish to visit. With **GeoAPP**, you have the ability to create and customize all this information according to your individual preferences.
 
@@ -69,13 +70,14 @@ mongodb+srv://<user>:<password>@cluster0.sxdtfez.mongodb.net/GeoApp
 ## Usage
 - To run the server, use the following command within the `server` terminal:
 ```bash
-nodemon index.js
+npm run dev
 ```
 - Then, to open GeoApp, use the command in the `client` terminal:
 ```bash
 npm run dev
 ```
 and select the link.
+
 
 
 ## Project Status
