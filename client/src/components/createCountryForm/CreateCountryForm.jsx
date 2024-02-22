@@ -117,15 +117,15 @@ function CreateCountryForm() {
         <form onSubmit={createCountry}>
           <div className='field-code'>
             <label>Codigo Pais</label>
-            <input type="text" name='code' required value={code} onChange={e => setCode(e.target.value)} placeholder='Code' />
+            <input type="text" name='code' required value={code} onChange={e => setCode(e.target.value)} placeholder='Codigo' />
             <button className='btn-consult' onClick={handleConsultClick}>Consultar</button>
           </div>
           <div className='field-form-create'>
   
             <div className='box'>
               <div className='input-group'>
-                <label>Name</label>
-                <input type="text" value={name} disabled onChange={e => setName(e.target.value)} name="name" required placeholder='Name' />
+                <label>Nombre</label>
+                <input type="text" value={name} disabled onChange={e => setName(e.target.value)} name="name" required placeholder='Nombre' />
               </div>
               <div className='input-group'>
                 <label>Capital</label>
@@ -135,19 +135,19 @@ function CreateCountryForm() {
             
             <div className='box'>
               <div className='input-group'>
-                <label>Languages</label>
-                <input type="text" name="languages" disabled required value={languages} onChange={e => setLanguages(e.target.value)} placeholder='Languages' />
+                <label>Idioma</label>
+                <input type="text" name="languages" disabled required value={languages} onChange={e => setLanguages(e.target.value)} placeholder='Idioma' />
               </div>
               <div className='input-group'>
-                <label>Currency</label>
-                <input type="text" name="currency" required value={currency} onChange={e => setCurrency(e.target.value)} placeholder='Currency' />
+                <label>Moneda</label>
+                <input type="text" name="currency" required value={currency} onChange={e => setCurrency(e.target.value)} placeholder='Moneda' />
               </div>
             </div>
   
             <div className='box'>
               <div className='input-group'>
-                <label>Continent</label>
-                <input type="text" name="continent" disabled required value={continent} onChange={e => setContinent(e.target.value)} placeholder='Continent' />
+                <label>Continente</label>
+                <input type="text" name="continent" disabled required value={continent} onChange={e => setContinent(e.target.value)} placeholder='Continente' />
               </div>
             </div>
             

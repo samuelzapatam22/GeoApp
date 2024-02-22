@@ -89,15 +89,15 @@ function UpdateCountryForm() {
         <div className='container-form-update'>
           <form onSubmit={handleSubmit}>
             <div className='field-code'>
-              <label>Code country</label>
-              <input required type="text" name='code' placeholder='Code' value={countryData.code} onChange={handleChange} />
+              <label>Codigo Pais</label>
+              <input required type="text" name='code' placeholder='Codigo' value={countryData.code} onChange={handleChange} />
               <button className='btn-consult' onClick={handleConsult}>Consultar</button>
             </div>
             <div className='field-form-update'>
               <div className='box'>
               <div className='input-group'>
                 <label>Nombre</label>
-                <input required type="text" name="name" placeholder='Name' value={countryData.name} onChange={handleChange} />
+                <input required type="text" name="name" placeholder='Nombre' value={countryData.name} onChange={handleChange} />
             </div>
               <div className='input-group'>
                 <label>Capital</label>
@@ -106,18 +106,18 @@ function UpdateCountryForm() {
             </div>
   <div className='box'>
   <div className='input-group'>
-    <label>Lengua</label>
-    <input required type="text" name="languages" placeholder='Languages' value={countryData.languages} onChange={handleChange} />
+    <label>Idioma</label>
+    <input required type="text" name="languages" placeholder='Idioma' value={countryData.languages} onChange={handleChange} />
   </div>
   <div className='input-group'>
     <label>Moneda</label>
-    <input required type="text" name="currency" placeholder='Currency' value={countryData.currency} onChange={handleChange} />
+    <input required type="text" name="currency" placeholder='Moneda' value={countryData.currency} onChange={handleChange} />
   </div>
   </div>
   <div className='box'>
   <div className='input-group'>
     <label>Continente</label>
-    <input required type="text" name="continent" placeholder='Continent' value={countryData.continent} onChange={handleChange} />
+    <input required type="text" name="continent" placeholder='Continente' value={countryData.continent} onChange={handleChange} />
   </div>
   </div>
 </div>
