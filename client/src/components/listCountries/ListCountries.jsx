@@ -92,7 +92,8 @@ function ListCountries() {
       <div className='container-ListCountries'>
         <SearchBar handleSearch={handleSearch} setSelectedContinent={setSelectedContinent} />
         <div className='ListCountries'>
-          {filteredLists.map((list) => (
+          {filteredLists.length > 0 ? (
+          filteredLists.map((list) => (
            <div className={`ListCountriesItem ${selectedCountry === list ? 'card-active' : ''}`} onClick={() => handleCountryClick(list)}>
               <div className='image-head'>
               <img src={list.imageURL} className='img-country' alt={list.name} />
@@ -107,7 +108,12 @@ function ListCountries() {
               </div>
               </div>
             </div>
-          ))}
+          )
+          )
+          ): (
+            <p className="Pais-not-found">Pais no encontrado</p>
+          )
+        }
         </div>
       </div>
       {selectedCountry && (

@@ -152,4 +152,8 @@ span {
   .bandera-details {
     width: 40px;
   }
+
+  .Pais-not-found {
+    margin-top: 100px;
+  }
 }
