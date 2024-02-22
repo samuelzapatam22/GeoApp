@@ -15,7 +15,7 @@ body {
   display: flex;
 }
 
-@media screen and (max-widht: 678px){
+@media screen and (max-width: 678px){
   .slider-bar{
     width: 20vw;
     margin: 0%;
@@ -30,8 +30,18 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 250px;
-  position: absolute;
 }
+
+@media screen and (max-width: 678px){
+  .container{
+    height: 10vh;
+
+    justify-content: center;
+    align-content: flex-start;
+    padding: 30vw;
+  }
+}
+
 
 @media screen and (max-width: 678px){
   .content{

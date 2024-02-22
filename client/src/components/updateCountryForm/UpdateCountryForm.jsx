@@ -6,6 +6,7 @@ import SliderBar from '../sliderBar/SliderBar';
 function UpdateCountryForm() {
   const [upDate, setupDate] = useState(false)
   const [countryNoFind, setCountryNofind] = useState(false)
+  const [deleteCountry, setDeleteCountry] = useState(false)
   const [countryData, setCountryData] = useState({
     code: '',
     name: '',
@@ -15,7 +16,6 @@ function UpdateCountryForm() {
     continent: '',
   });
 
-  const [deleteCountry, setDeleteCountry] = useState(false)
 
   const handleChange = (e) => {
     setCountryData({ ...countryData, [e.target.name]: e.target.value });

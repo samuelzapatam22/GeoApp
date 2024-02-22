@@ -75,7 +75,7 @@ const createCountry = async (req,res) => {
  const deleteCountry = async(req, res) => {
    try {
       await Country.findByIdAndDelete(req.params.id)
-      res.json({message: "user deleted success"})
+      res.json({message: "country deleted success"})
    } catch (error) {
       console.log('error trying delete Country');
         res.status(500).json({error: "error al eliminar pais"})

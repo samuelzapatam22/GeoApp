@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center; 
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
-  width: 60%;
   height: 50px;
   border-radius: 40px;
   position: fixed;

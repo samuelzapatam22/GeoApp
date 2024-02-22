@@ -59,7 +59,7 @@ function ListCountries() {
   }, [selectedContinent]);
 
   const fetchImages = async (country) => {
-    const searchTerm = `landscape ${country.name}`;
+    const searchTerm = `${country.name}`;
     const pixabayResponse = await axios.get(`https://pixabay.com/api/?key=41410303-8519e05926d07343adf71a333&q=${searchTerm}&image_type=photo&category=places`);
     const imageHits = pixabayResponse.data.hits;
     const imageURL = imageHits.length > 0 ? imageHits[0].webformatURL : no_found;
@@ -99,7 +99,7 @@ function ListCountries() {
               </div>
               <div className='footer-card'>
                 <div className='bandera-cad'>
-              <img src={`https://flagsapi.com/${list.code}/flat/64.png`} alt={list.name} />
+              <img className="bandera" src={`https://flagsapi.com/${list.code}/flat/64.png`} alt={list.name} />
               </div>
               <div className='info-card'>
               <h2>{list.name}</h2>

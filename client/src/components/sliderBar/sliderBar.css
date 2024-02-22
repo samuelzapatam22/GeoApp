@@ -2,7 +2,7 @@
 .sliderBar {
     padding: 20px;
     background-color: rgb(104, 104, 104);
-    width: 17vw;
+    width: 200px;
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -43,5 +43,17 @@
 
     .sliderBar a {
         margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .sliderBar {
+        height: 5%;
+    }
+
+    .sliderBar a {
+        padding: 4px;
+        font-size: 1rem;
+    margin-bottom: 5px;
     }
 }

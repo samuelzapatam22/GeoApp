@@ -3,18 +3,66 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    max-width: 100%;
-    width: 80vw;
     padding: 20px;
     color: #000;
-    
+    margin-left: 250px;
+}
+
+
+@media screen and (max-width: 501px){
+    .UpdateCountryForm{
+        width: 10%;  
+        height: 50%;
+        margin-left: 50px;
+        justify-content: center;
+    }
+
+    .input-group {
+        display: flex;
+        margin-bottom: 0rem;
+    }
+
+    input {
+        padding: 2px;
+        margin-bottom: 2px;
+    }
 }
 
 @media screen and (max-width: 678px){
     .UpdateCountryForm{
         width: 50%;  
         height: 50%;
+        margin-left: 8  0px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .UpdateCountryForm{
+        width: 10%;  
+        height: 50%;
         margin-left: 50px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .UpdateCountryForm{
+        margin-left: 50px;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1110px){
+    .UpdateCountryForm{
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .UpdateCountryForm{
+        margin-left: 100px;
     }
 }
 
