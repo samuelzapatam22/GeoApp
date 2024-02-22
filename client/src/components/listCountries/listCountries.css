@@ -156,4 +156,21 @@ span {
   .Pais-not-found {
     margin-top: 100px;
   }
+  .container-ListCountries{
+  
+    margin-top: 290px;
+    margin-bottom: 100px;
+  }
+  .ListCountriesItem{
+    width: 150px;
+    height: 130px;
+    font-size: 8px;
+  }
+  .bandera{
+    width: 40px;
+  }
+  .img-country {
+    width: 90%;
+    height: 80px;
+  }
 }

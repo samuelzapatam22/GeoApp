@@ -24,7 +24,7 @@ function UpdateCountryForm() {
   const handleConsult = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3001/api/countries/getCountriesId/${countryData.code}`);
+      const response = await axios.get(`https://geoapp-k79v.onrender.com/api/countries/getCountriesId/${countryData.code}`);
       if (response.data) {
         setCountryData(response.data);
       } else {
@@ -51,7 +51,7 @@ function UpdateCountryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3001/api/countries/upDateCountriesId/${countryData._id}`, countryData);
+      await axios.put(`https://geoapp-k79v.onrender.com/api/countries/upDateCountriesId/${countryData._id}`, countryData);
       console.log('País actualizado exitosamente');
       setupDate(true)
       setTimeout(() => {
@@ -65,7 +65,7 @@ function UpdateCountryForm() {
   const handleDelete = async(e) => {
       e.preventDefault();
       try {
-        await axios.delete(`http://localhost:3001/api/countries/deleteCountry/${countryData._id}`, deleteCountry);
+        await axios.delete(`https://geoapp-k79v.onrender.com/api/countries/deleteCountry/${countryData._id}`, deleteCountry);
         setDeleteCountry(true)
         setTimeout(() => {
           setDeleteCountry('');

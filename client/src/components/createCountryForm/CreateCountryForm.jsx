@@ -37,7 +37,7 @@ function CreateCountryForm() {
 
   const handleConsultClick = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/api/countries/getCountriesId/${code}`);
+      const response = await axios.get(`https://geoapp-k79v.onrender.com/api/countries/getCountriesId/${code}`);
       if (response.data) {
         setErrorMessage('El país ya existe en la base de datos');
         setTimeout(() => {
@@ -92,7 +92,7 @@ function CreateCountryForm() {
     setContinent('');
   
     try {
-      const response = await axios.post('http://localhost:3001/api/countries/create', countryData);
+      const response = await axios.post('https://geoapp-k79v.onrender.com/api/countries/create', countryData);
       console.log(response.data);
       console.log('Creado exitosamente');
       setCreated(true);

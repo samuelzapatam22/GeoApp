@@ -15,7 +15,7 @@ function ListCountries() {
   useEffect(() => {
     const getCountry = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/countries/getCountries');
+        const response = await axios.get('https://geoapp-k79v.onrender.com/api/countries/getCountries');
         const countriesWithImages = await Promise.all(response.data.map(async (country) => {
           const imageURL = await fetchImages(country);
           return {
@@ -37,7 +37,7 @@ function ListCountries() {
   useEffect(() => {
     const fetchCountriesByContinent = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/countries/filterByContinent/${selectedContinent}`);
+        const response = await axios.get(`https://geoapp-k79v.onrender.com/api/countries/filterByContinent/${selectedContinent}`);
         const countriesWithImagesForContinent = await Promise.all(response.data.map(async (country) => {
           const imageURL = await fetchImages(country);
           return {
