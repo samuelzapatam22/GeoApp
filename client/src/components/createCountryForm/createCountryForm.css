@@ -9,64 +9,6 @@
 }
 
 
-@media screen and (max-width: 501px){
-    .CreateCountryForm{
-        width: 10%;  
-        height: 50%;
-        margin-left: 50px;
-        justify-content: center;
-    }
-
-    .input-group {
-        display: flex;
-        margin-bottom: 0rem;
-    }
-
-    input {
-        padding: 2px;
-        margin-bottom: 2px;
-    }
-}
-
-@media screen and (max-width: 678px){
-    .CreateCountryForm{
-        width: 50%;  
-        height: 50%;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .CreateCountryForm{
-        width: 10%;  
-        height: 50%;
-        margin-left: 50px;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 870px){
-    .CreateCountryForm{
-        margin-left: 50px;
-        justify-content: center;
-    }
-}
-
-
-@media screen and (max-width: 1110px){
-    .CreateCountryForm{
-        margin-left: 200px;
-    }
-}
-
-@media screen and (max-width: 1050px){
-    .CreateCountryForm{
-        margin-left: 100px;
-    }
-}
-
-
 input {
     padding: 8px;
     margin-bottom: 15px;
@@ -171,3 +113,42 @@ button {
     text-align: center;
 }
  
+
+@media screen and (max-width: 678px){
+    .CreateCountryForm{
+        width: 50%;  
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .CreateCountryForm{
+        width: 10%;  
+        height: 50%;
+        margin-left: 50px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .CreateCountryForm{
+        margin-left: 50px;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 1110px){
+    .CreateCountryForm{
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .CreateCountryForm{
+        margin-left: 100px;
+        font-size: 10px;
+    }
+}

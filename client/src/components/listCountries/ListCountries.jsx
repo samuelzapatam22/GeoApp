@@ -116,9 +116,9 @@ function ListCountries() {
           <img src={selectedCountry.imageURL} className='img-country-details' alt={selectedCountry.name} />
           <div className='head-popup'>
           <div className='name-details'>
-          <img src={`https://flagsapi.com/${selectedCountry.code}/flat/64.png`} alt={selectedCountry.name} />
+          <img className="bandera-details" src={`https://flagsapi.com/${selectedCountry.code}/flat/64.png`} alt={selectedCountry.name} />
           </div>
-          <div className='continent.popup'>
+          <div className='continent-popup'>
           <h2>{selectedCountry.name}</h2>
           <p>{selectedCountry.continent}</p>
           </div>

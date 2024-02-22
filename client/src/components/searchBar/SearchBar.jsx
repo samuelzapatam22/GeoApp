@@ -24,7 +24,6 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
   const limpiar = () => {
     setSelectedContinent(null)
     setShowPopup(false)
-    console.log("limpiando")
   }
   return (
     <div className="SearchBar">
@@ -38,7 +37,7 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
       <button className="Button" onClick={handleButtonClick}>Buscar</button>
       {showPopup && (
         <div className="popup">
-          <div className="head-continent-popup">
+        
             <div className="header-popup">
             <h3>filtrar por continentes</h3>
             <p className="limpiar" onClick={limpiar}>Limpiar</p>
@@ -75,7 +74,7 @@ const SearchBar = ({ handleSearch, setSelectedContinent }) => {
               
             </div>
           </div>
-        </div>
+
       )}
     </div>
   );

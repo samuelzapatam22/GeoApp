@@ -11,13 +11,6 @@
   position: fixed;
   top: 20px;
 }
-.continents{
-  display: flex;
-}
-
-.boxx {
-  flex-direction: column;
-}
 
 
 .input-SearchBar {
@@ -55,11 +48,12 @@
   transform: translateX(-50%);
   background-color: white;
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 10px;
   z-index: 1000;
   color: #000000;
   box-shadow: 1px 2px 2px 2px #00000044;
 }
+
 
 .popup img {
   width: 140px;
@@ -80,4 +74,85 @@
 .limpiar:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.continents{
+  display: flex;
+}
+
+
+@media screen and (max-width:1200px){
+  .popup{
+    position: absolute;
+    top: 60px; 
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    color: #000000;
+    box-shadow: 1px 2px 2px 2px #00000044;
+  }
+
+  .popup img {
+    width: 110px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width:1032px){
+
+  .popup {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+
+  .header-popup {
+    gap: 3rem;
+    justify-content: center;
+  }
+  .popup img {
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width:970px){
+
+  .input-SearchBar {
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .Button {
+    padding: 6px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .SearchBar {
+    margin-right: 10px;
+    height: 40px;
+    border-radius: 30px;
+    top: 20px;
+  }
+  
+
+  .popup {
+    margin-left:60px;
+    font-size: 12px;
+  }
+
+  .header-popup {
+    gap: 3rem;
+    justify-content: center;
+  }
+  .popup img {
+    width: 54px;
+    height: 54px;
+    margin-left: 10px;
+  }
 }

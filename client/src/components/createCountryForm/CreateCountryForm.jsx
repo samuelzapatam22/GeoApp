@@ -109,6 +109,16 @@ function CreateCountryForm() {
       }, 2000);
     }
   }
+
+
+  const cleanForm = () => {
+    setCode('');
+    setName('');
+    setCapital('');
+    setLanguages('');
+    setCurrency('');
+    setContinent('');
+  }
   
   return (
     <div className='slider-bar'>
@@ -153,7 +163,7 @@ function CreateCountryForm() {
             
           </div>
           <div className='buttons'>
-            <button className='btn-clean'>Limpiar</button>
+            <button className='btn-clean' onClick={cleanForm}>Limpiar</button>
             <button type='submit' className='btn-create'>Crear</button>
           </div>
         </form>

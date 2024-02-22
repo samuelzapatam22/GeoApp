@@ -56,18 +56,7 @@ height: calc(100vh - 40px);
     }
   
   }  
-  @media screen and (max-width:678px){
-    .ListCountries{
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100vw !important;
-      height: 80vh !important;
-      grid-template-columns: repeat(2, 1fr) !important;
 
-    }
-    
-  }
 
 .ListCountriesItem p{
   color: gray;
@@ -99,7 +88,7 @@ height: calc(100vh - 40px);
 }
 
 .btn-close {
-  margin-left: 210px;
+
   background: none;
 }
 
@@ -144,4 +133,23 @@ span {
 .card-active {
   background-color: #8ca5dd; 
   color: white;
+}
+
+
+
+@media screen and (max-width:678px){
+  .country-details{
+    width: 160px;
+    height: 300px;
+    font-size: 12px;
+    bottom: 160px;
+    top: 90px;
+  }
+  .img-country-details {
+    width: 120px;
+  }
+
+  .bandera-details {
+    width: 40px;
+  }
 }

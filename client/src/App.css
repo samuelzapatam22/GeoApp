@@ -34,19 +34,35 @@ body {
 
 @media screen and (max-width: 678px){
   .container{
-    height: 10vh;
-
+    height: 30vh;
     justify-content: center;
     align-content: flex-start;
     padding: 30vw;
+  }
+  input {
+    padding: 2px;
+    width: 100px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 7px;
+    font-size: 12px;
   }
 }
 
 
 @media screen and (max-width: 678px){
   .content{
-    margin-left: 100px;
+    margin-left: -40px;
+    width: 200px;
+    font-size: 10px;
   }
+
+
 }
 
 .elements {
